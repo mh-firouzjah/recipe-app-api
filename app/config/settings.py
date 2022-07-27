@@ -39,11 +39,17 @@ DJANGO_DEFAULT_APPS = [
     'django.contrib.staticfiles',
 ]
 
-PROJECT_APPS = [
-    "core.CoreAppConfig"
+THIRD_PARTY_APPS = [
+    "rest_framework",
+    "rest_framework.authtoken",
 ]
 
-INSTALLED_APPS = DJANGO_DEFAULT_APPS + PROJECT_APPS
+PROJECT_APPS = [
+    "core.CoreAppConfig",
+    "user.UserAppConfig",
+]
+
+INSTALLED_APPS = DJANGO_DEFAULT_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
